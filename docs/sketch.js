@@ -6,7 +6,7 @@ let grid = [];
 let wk,bk;
 
 function preload() {
-  img = loadImage('/dekel.jpg');
+  img = loadImage('docs/dekel.jpg');
 }
 
 function initgrid() {
