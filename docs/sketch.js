@@ -1,13 +1,13 @@
-// let dek = false
+let dek = false
 let count = 0;
 let secret = [];
 let postframecount = 0;
 let grid = [];
 let wk,bk;
 
-// function preload() {
-//   img = loadImage('docs/dekel.jpg');
-// }
+function preload() {
+  img = loadImage('docs/dekel.jpg');
+}
 
 function initgrid() {
   let rows = 8, cols = 8;
@@ -136,25 +136,25 @@ function setup() {
 
 }
 
-// function mouseClicked(){
-//     if(postframecount>20){
-//     let x2 = mouseX
-//     let y2= mouseY
-//     secret.push([(Math.floor(x2/100)),(Math.floor(y2/100))])
+function mouseClicked(){
+    if(postframecount>20){
+    let x2 = mouseX
+    let y2= mouseY
+    secret.push([(Math.floor(x2/100)),(Math.floor(y2/100))])
    
     
     
-//     count++
+    count++
     
-//   }
-//    if (count==4&&secret[0][0]==0&&secret[0][1]==4
-//        &&secret[1][0]==4&&secret[1][1]==4
-//        &&secret[2][0]==4&&secret[2][1]==2){
+  }
+   if (count==4&&secret[0][0]==0&&secret[0][1]==4
+       &&secret[1][0]==4&&secret[1][1]==4
+       &&secret[2][0]==4&&secret[2][1]==2){
      
-//       dek = true;
-//   }
+      dek = true;
+  }
 
-// }
+}
 
 
 /////////////////
@@ -181,9 +181,9 @@ postframecount++;
        
       //change the turn and  the piece you are holding
       playTurn();
-      // if(dek){
-      //    image(img, 0, 0);
-      // }
+      if(dek){
+         image(img, 0, 0);
+      }
       //reset the timer
       if(mouseIsPressed){
         clickTimer=0;
