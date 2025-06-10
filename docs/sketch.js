@@ -6,7 +6,7 @@ let grid = [];
 let wk,bk;
 
 function preload() {
-  img = loadImage('docs/dekel.jpg');
+  img = loadImage('https://github.com/snarkif/soft-body-chess/blob/main/docs/dekel.jpg');
 }
 
 function initgrid() {
