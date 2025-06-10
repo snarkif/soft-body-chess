@@ -1,13 +1,13 @@
-let dek = false
-let count = 0
+// let dek = false
+let count = 0;
 let secret = [];
-let postframecount = 0
+let postframecount = 0;
 let grid = [];
 let wk,bk;
 
-function preload() {
-  img = loadImage('docs/dekel.jpg');
-}
+// function preload() {
+//   img = loadImage('docs/dekel.jpg');
+// }
 
 function initgrid() {
   let rows = 8, cols = 8;
@@ -22,7 +22,7 @@ function initgrid() {
   //////////////////////////////
   function translator(x,y,points){//translates cords of original point array and translates it to the suiting place according to the piece location in the array 
     let newpoints = []
-    let xy
+    let xy;
     for(let i =0;i<points.length;i++){
       xy = points[i];
       newpoints.push([xy[0]+x*100,xy[1]+y*100])
@@ -130,31 +130,31 @@ function setup() {
  
     for(let i = 0;i<150;i++){
       var b = new boid()
-      b.setPosition(random(0,width),random(0,height))
-      boids.push(b)
+      b.setPosition(random(0,width),random(0,height));
+      boids.push(b);
     }
 
 }
 
-function mouseClicked(){
-    if(postframecount>20){
-    let x2 = mouseX
-    let y2= mouseY
-    secret.push([(Math.floor(x2/100)),(Math.floor(y2/100))])
+// function mouseClicked(){
+//     if(postframecount>20){
+//     let x2 = mouseX
+//     let y2= mouseY
+//     secret.push([(Math.floor(x2/100)),(Math.floor(y2/100))])
    
     
     
-    count++
+//     count++
     
-  }
-   if (count==4&&secret[0][0]==0&&secret[0][1]==4
-       &&secret[1][0]==4&&secret[1][1]==4
-       &&secret[2][0]==4&&secret[2][1]==2){
+//   }
+//    if (count==4&&secret[0][0]==0&&secret[0][1]==4
+//        &&secret[1][0]==4&&secret[1][1]==4
+//        &&secret[2][0]==4&&secret[2][1]==2){
      
-      dek = true;
-  }
+//       dek = true;
+//   }
 
-}
+// }
 
 
 /////////////////
@@ -171,7 +171,7 @@ function draw() {
   
   if (f == true) {
     f = start(arr, n);
-    turn='white'
+    turn='white';
   }
   else {
 postframecount++;
@@ -181,9 +181,9 @@ postframecount++;
        
       //change the turn and  the piece you are holding
       playTurn();
-      if(dek){
-         image(img, 0, 0);
-      }
+      // if(dek){
+      //    image(img, 0, 0);
+      // }
       //reset the timer
       if(mouseIsPressed){
         clickTimer=0;
