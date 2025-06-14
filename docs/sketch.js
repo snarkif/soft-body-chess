@@ -124,7 +124,9 @@ function setup() {
   angleMode(DEGREES);
   
  
-  createCanvas(800, 800);
+   let canvas = createCanvas(800, 800);
+canvas.center();
+
   initgrid();
 
  
