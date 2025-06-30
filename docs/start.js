@@ -1,3 +1,4 @@
+
 var boids=[]
 ///////////////////////////
 let angle = 0;
@@ -20,13 +21,13 @@ function start(arr,n,startTimer){
 
 
   for(let b of boids){
-     b.applyForce(b.avoidAll())
-     b.applyForce(b.align(boids).mult(3))
-     b.applyForce(b.cohesion(boids).mult(2))
-     b.applyForce(b.seperate(boids).mult(2))
+     b.applyForce(b.avoidAll());
+     b.applyForce(b.align(boids).mult(2));
+     b.applyForce(b.cohesion(boids).mult(3));
+     b.applyForce(b.seperate(boids).mult(3));
     if(mouseIsPressed){
-     b.applyForce(b.seekmouse().mult(10))
-
+     b.applyForce(b.seekmouse().mult(10));
+    
     }
      b.update()
   }
@@ -42,8 +43,6 @@ function start(arr,n,startTimer){
   textSize(40)
   textFont("Courier New")
   text("softbody chess",400,550)
-  textSize(20)
-  text("by koren, uri and snir ",403,580)
   return true;
 
 
