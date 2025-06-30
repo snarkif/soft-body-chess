@@ -148,6 +148,8 @@ function ld(){
 }
 ///////////////////////////draw
 let framecounter2=0;
+let moveFlag=false;
+let squares2;
 function draw() {
   
   if (f == true) {
@@ -170,8 +172,17 @@ postframecount++;
     fill(100,32,66);
     circle(width/8,height/8,10);
     if(mouseIsPressed&&(mouseX>width/8-5)&&(mouseX<width/8+5)&&(mouseY>height/8-5)&&(mouseY<height/8+5)&&framecounter2>10) {
-      findBestMove();
+      squares2=findBestMove();
       framecounter2=0;
+      moveFlag=(!moveFlag);
+      
+    }
+    if(moveFlag){
+      fill(30,200,100);
+      square(squares2[0][0]*100,squares2[0][1]*100,100);
+      fill(200,20,100);
+      square(squares2[1][0]*100,squares2[1][1]*100,100);
+      
     }
     //}
     //timer
