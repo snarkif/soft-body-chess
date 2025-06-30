@@ -125,13 +125,9 @@ function setup() {
   
  
   createCanvas(800, 800);
+  canvas.center();
   initgrid();
 
-   A = createSlider(0,10,3,0)
-   C = createSlider(0,10,2,0)
-  S = createSlider(0,10,2,0)
-    M = createSlider(0,10,10,0)
-    
     for(let i = 0;i<150;i++){
       var b = new boid()
       b.setPosition(random(0,width),random(0,height))
