@@ -333,6 +333,5 @@ function performMove(orgX, orgY, move) {
 }
 
 function findBestMove(){
-  let val = runcalc();
-  console.log(val.str) ;
+  return  calc()[1];
 }
